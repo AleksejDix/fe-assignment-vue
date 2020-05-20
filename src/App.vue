@@ -1,9 +1,9 @@
 <template>
     <div id="app">
-        <!--<div id="nav">-->
-        <!--<router-link to="/">Home</router-link>-->
-        <!--</div>-->
-        <router-view/>
+        <div id="nav">
+        <router-link :to="{name: 'home'}">Home</router-link>
+        </div>
+        <router-view :key="$router.fullPath"/>
     </div>
 </template>
 
@@ -23,5 +23,10 @@
         padding: $layout-space-base;
         margin: $layout-space-base / 2;
         background: linear-gradient(to right bottom, $color-todo-dark 0%, $color-todo-light 100%);
+    }
+    .listing-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
     }
 </style>
